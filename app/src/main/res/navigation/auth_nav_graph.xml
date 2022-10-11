@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/auth_nav_graph.xml"
+    app:startDestination="@id/typeFragment">
+
+    <fragment
+        android:id="@+id/typeFragment"
+        android:name="az.zero.azattendance.presentation.screens.auth.type.TypeFragment"
+        android:label="TypeFragment" >
+        <action
+            android:id="@+id/action_typeFragment_to_attendantLoginFragment"
+            app:destination="@id/attendantLoginFragment" />
+        <action
+            android:id="@+id/action_typeFragment_to_orgLoginFragment"
+            app:destination="@id/orgLoginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orgLoginFragment"
+        android:name="az.zero.azattendance.presentation.screens.auth.login_organization.OrgLoginFragment"
+        android:label="OrgLoginFragment" />
+    <fragment
+        android:id="@+id/attendantLoginFragment"
+        android:name="az.zero.azattendance.presentation.screens.auth.login_attendant.AttendantLoginFragment"
+        android:label="AttendantLoginFragment" />
+</navigation>
